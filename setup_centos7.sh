@@ -12,7 +12,7 @@ sudo yum groupinstall -y "Development Tools"
 sudo yum install -y python-devel python3-devel ncurses-devel git zsh wget curl
 sudo yum remove -y vim
 sudo yum install -y epel-release
-sudo yum install -y autojump-zsh autojump-fish htop
+sudo yum install -y autojump-zsh autojump-fish htop libevent-devel
 sudo yum remove -y epel-release
 export http_proxy="http://192.168.139.1:1080"
 export https_proxy="http://192.168.139.1:1080"
@@ -54,11 +54,13 @@ sh autogen.sh
 sudo make install
 cd ..
 rm -rf tmux
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
 
 ## import config file
-mv ./.zshrc ${ZSH_CUSTOM:-~/}
-mv ./.vimrc ${ZSH_CUSTOM:-~/}
-mv ./.tmux.conf ${ZSH_CUSTOM:-~/}
+cp ./.zshrc ${ZSH_CUSTOM:-~/}
+cp ./.vimrc ${ZSH_CUSTOM:-~/}
+cp ./.tmux.conf ${ZSH_CUSTOM:-~/}
 
 ## change shell
 /bin/zsh
