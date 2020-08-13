@@ -13,9 +13,8 @@ sudo yum install -y python-devel python3-devel ncurses-devel git zsh wget curl
 sudo yum remove -y vim
 sudo yum install -y epel-release
 sudo yum install -y autojump-zsh autojump-fish htop libevent-devel
-sudo yum remove -y epel-release
-export http_proxy="http://192.168.139.1:1080"
-export https_proxy="http://192.168.139.1:1080"
+#export http_proxy="http://192.168.139.1:1080"
+#export https_proxy="http://192.168.139.1:1080"
 
 ## install vim
 git clone https://github.com/vim/vim.git
@@ -39,7 +38,7 @@ rm -rf vim
 
 ## install oh-my-zsh
 sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-chsh -s /bin/zsh
+#chsh -s /bin/zsh
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 wget https://raw.githubusercontent.com/caiogondim/bullet-train-oh-my-zsh-theme/master/bullet-train.zsh-theme

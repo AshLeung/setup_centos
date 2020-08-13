@@ -13,6 +13,7 @@ set wildmenu
 set tabstop=4
 set shiftwidth=4
 set laststatus=2
+set relativenumber
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
